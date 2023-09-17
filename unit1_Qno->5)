@@ -1,0 +1,86 @@
+Problem Statement
+
+
+
+Vishnu is developing a geometry application that requires calculations related to lines. The program should be utilized to calculate the distance between two points and find the midpoint of a line segment.
+
+
+
+Create a structure named Line to store the coordinates of a point, say x and y. Find the distance between two Points.
+
+
+
+The distance between two points is given by the Euclidean formula.
+
+
+
+
+
+Also find the midpoint of the line formed by two points (x1, y1) and (x2, y2):
+
+
+
+
+
+
+
+Note: This is a sample question asked in an Amcat interview.
+
+Input format :
+The first line of input is the value of X1 and Y1, separated by a space.
+
+The next line is the value of X2 and Y2, separated by a space.
+
+Output format :
+The first line of output prints the distance between two points.
+
+The next line prints the midpoint.
+
+
+
+Refer to the sample output for the exact format.
+
+Code constraints :
+X1, X2 >=0
+
+Y1, Y2>=0
+
+Sample test cases :
+Input 1 :
+1 1
+2 2
+Output 1 :
+Distance: 1.41
+Midpoint: 1.50 1.50
+Input 2 :
+3 2
+4 1
+Output 2 :
+Distance: 1.41
+Midpoint: 3.50 1.50
+Whitelist
+Set 1:
+struct Line
+
+
+soln:-
+
+#include<iostream>
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+struct Line{
+    float x1,y1;
+    float x2,y2;
+};
+int main(){
+    struct Line s;
+    cin>>s.x1>>s.y1;
+    cin>>s.x2>>s.y2;
+    float a=(s.x1+s.x2)/2;
+    float b=(s.y1+s.y2)/2;
+    float c=sqrt(pow((s.x2-s.x1),2)+pow((s.y2-s.y1),2));
+    cout<<fixed<<setprecision(2)<<"Distance: "<<c<<endl;
+    cout<<fixed<<setprecision(2)<<"Midpoint: "<<a<<" "<<fixed<<setprecision(2)<<b;
+    return 0;
+}
