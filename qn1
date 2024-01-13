@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+class Input{
+    public:
+    string name;
+    int rollnum;
+    
+};
+int main(){
+    Input I1;
+    cin>>I1.name;
+    cin>>I1.rollnum;
+    cout<<I1.rollnum<<" "<<":"<<" "<<I1.name;
+    return 0;
+}
